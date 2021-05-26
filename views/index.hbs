@@ -1,0 +1,673 @@
+<nav class="sidebar">
+  <div class="sidebar__home"></div>
+  <div class="sidebar__menu">
+    <div class="sidebar__menu__link sidebar__menu__link--frame sidebar__menu__link--active">
+      <img src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/frame.svg" alt="frame">
+    </div>
+    <div class="sidebar__menu__link sidebar__menu__link--folder">
+      <img src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/folder.svg" alt="folder">
+    </div>
+    <div class="sidebar__menu__link sidebar__menu__link--mail">
+      <img src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/mail.svg" alt="mail">
+    </div>
+    {{!-- dark mode --}}
+    <div class="sidebar__menu__link">
+      <label for="sidebar__darkmode__toggle" class="sidebar__darkmode__label"></label>
+      <input type="checkbox" id="sidebar__darkmode__toggle" class="sidebar__darkmode__input">
+    </div>
+  </div>
+</nav>
+<main class="main">
+  <h1 class="main__title">Campaign</h1>
+  <div class="container">
+    <table class="main__table">
+      <thead>
+        <tr class="table__header table__row">
+          <th class="table__cell table__cell--checkbox table__cell__head--fixed">
+            <input type="checkbox" class="table__cell__checkbox--checked">
+          </th>
+          <th class="table__cell table__cell--id table__cell__head--fixed">ID</th>
+          <th class="table__cell table__cell--name table__cell__head--fixed">名字</th>
+          <th class="table__cell table__cell--advertiser table__cell__head--fixed">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__advertiser__line--group table__cell__head--fixed">Group</span>
+          </th>
+          <th class="table__cell table__cell--description table__cell__head--fixed">Description</th>
+          <th class="table__cell table__cell--price table__cell__head--fixed">
+            <span>Price</span>
+            <img class="header__cell__icon header__cell__icon--right"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg" />
+          </th>
+          <th class="table__cell table__cell--starttime table__cell__head--fixed">
+            <span>Start Time</span>
+            <img class="header__cell__icon header__cell__icon--right"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg" />
+          </th>
+          <th class="table__cell table__cell--endtime table__cell__head--fixed">
+            <span>End Time</span>
+            <img class="header__cell__icon header__cell__icon--right"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg" />
+          </th>
+          <th class="table__cell table__cell--action table__cell__head--fixed">Action</th>
+        </tr>
+      </thead>
+      <tbody class="table_body">
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox" class="table__cell__checkbox--checked">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input"
+              id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input" id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__cell table__cell--checkbox">
+            <input type="checkbox" class="hello">
+          </td>
+          <td class="table__cell table__cell--id">ID</td>
+          <td class="table__cell table__cell--name">Name</td>
+          <td class="table__cell table__cell__advertiser">
+            <span class="cell__advertiser__line">Advertiser</span>
+            <span class="cell__advertiser__line cell__line--group">Group</span>
+          </td>
+          <td class="table__cell table__cell--description">Description</td>
+          <td class="table__cell table__cell--price">Price</td>
+          <td class="table__cell table__cell--starttime">Start Time</td>
+          <td class="table__cell table__cell--endtime">End Time</td>
+          <td class="table__cell table__cell--action">
+            <img class="cell__action__icon"
+              src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg"
+              id="action__input" alt="menu" />
+            {{!-- menu --}}
+            <div class="action__menu hidden" role="dialog" aria-modal="true" aria-labelledby="action__input" id="action__menu">
+              <menu class="menu__body">
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/duplicate.svg"
+                  class="menu__item__icon">
+                <span>Duplicate</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/edit.svg"
+                  class="menu__item__icon">
+                <span>Edit</span>
+                </menuitem>
+                <menuitem class="menu__item">
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/delete.svg"
+                  class="menu__item__icon">
+                <span>Delete</span>
+                </menuitem>
+              </menu>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
