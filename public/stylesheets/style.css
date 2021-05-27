@@ -277,15 +277,13 @@ body {
   background: var(--table__row--checked-color);
 }
 
-.table__cell__head--fixed:hover,
-.header__cell__icon--right:hover {
+.table__header:hover .table__cell__head--fixed {
   color: var(--table__row--checked-color);
-  background: var(--main-dark);
-  opacity: 0.9;
+  opacity: 1.5;
 }
 
-.table__row .table__cell:hover {
+.table__row:hover {
   color: var(--table__row--checked-color);
   background: var(--main-dark);
-  opacity: 0.9;
+  opacity: 1.5;
 }
